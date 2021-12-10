@@ -11,6 +11,7 @@ video_exts = ('webm', 'mkv', 'flv', 'vob', 'ogv', 'ogg', 'rrc',
 
 img_exts = ('png', 'jpg', 'jpeg', 'bmp')
 
+media_exts = video_exts + img_exts
 
 def read_files(path, exts):
     exts = tuple(exts)
@@ -23,6 +24,7 @@ def read_files(path, exts):
     return files
 
 def get_output_file_type(file):
+    file_type = ""
     if file.endswith(video_exts):
         file_type = "video"
     elif file.endswith(img_exts):
@@ -50,7 +52,9 @@ def main():
         
         video_files = read_files(input_path, video_exts)
         
-        idx_output_file = [i for i, arg in enumerate(argv[idx_input_option + 2:]) if "." in arg]
+        idx_output_file = [i for i, arg in enumerate(argv[idx_input_option + 2:]) 
+                           if "." in arg and arg.endswith(media_exts)]
+        
         assert len(idx_output_file) != 0, "At least one output file must be specified"
         idx_output_file = idx_input_option + 2 + idx_output_file[0]
 

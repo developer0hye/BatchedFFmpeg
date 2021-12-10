@@ -1,6 +1,6 @@
 # BatchedFFmpeg
 
-## Requirments
+## Requirements
 
 - ffmpeg
 

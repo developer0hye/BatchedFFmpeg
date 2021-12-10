@@ -21,7 +21,8 @@ def main():
     idx_input_option = idx_input_option[0]
     
     assert len(argv) - 1 != idx_input_option, "usage: batchedffmpeg * -i {folder or file} *"
-    input_path = argv[idx_input_option + 1]
+    idx_input_file = idx_input_option + 1
+    input_path = argv[idx_input_file]
     
     if os.path.isfile(input_path):
         os.system("ffmpeg " + ' '.join(argv))
@@ -35,20 +36,20 @@ def main():
         
         video_files = read_files(input_path, video_exts)
         
-        idx_output = [i for i, arg in enumerate(argv[idx_input_option + 2:]) if "." in arg]
-        assert len(idx_output) != 0, "At least one output file must be specified"
-        idx_output = idx_input_option + 2 + idx_output[0]
+        idx_output_file = [i for i, arg in enumerate(argv[idx_input_option + 2:]) if "." in arg]
+        assert len(idx_output_file) != 0, "At least one output file must be specified"
+        idx_output_file = idx_input_option + 2 + idx_output_file[0]
 
-        output_file = argv[idx_output]
+        output_file = argv[idx_output_file]
         for video_file in video_files:
             
             input_name = pathlib.Path(video_file).stem
             
             # change input
-            argv[idx_input_option + 1] = video_file
+            argv[idx_input_file] = video_file
             
             # change output
-            argv[idx_output] = input_name + "_" + output_file
+            argv[idx_output_file] = input_name + "_" + output_file
             
             os.system("ffmpeg " + ' '.join(argv))
     else:

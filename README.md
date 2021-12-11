@@ -3,6 +3,7 @@
 Process multiple videos with one line of ffmpeg command.
 
 ![ezgif-1-b9b482fb9e6f](https://user-images.githubusercontent.com/35001605/145683660-2bd91e58-988a-4c1a-9955-533aa5cecba4.gif)
+![ezgif-2-4ce90071b4cd](https://user-images.githubusercontent.com/35001605/145685168-d55b420f-4481-40c5-8963-5ce1a76c6a0b.gif)
 
 ## Requirements
 

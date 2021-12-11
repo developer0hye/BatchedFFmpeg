@@ -1,5 +1,7 @@
 # BatchedFFmpeg
 
+Process multiple videos with one line of ffmpeg command.
+
 ## Requirements
 
 - ffmpeg
@@ -11,4 +13,3 @@ pip install batchedffmpeg
 ```
 
 ## Usage
-

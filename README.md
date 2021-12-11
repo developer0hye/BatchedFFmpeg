@@ -23,4 +23,4 @@ batchedffmpeg [options] [[infile options] -i infile]… {[outfile options] outfi
 
 Usage is the same with original ffmpeg besides `infile`. 
 
-`infile` can be a video file or **folder(=directory) the video files are saved**. If you type a folder, program will search all video files in a folder including subfolders and then those files will be processed under the same command.
+`infile` can be a video file or **folder(=directory) the video files are saved**. If `infile` is a folder, program will search all video files in a folder including subfolders and then those files will be processed under the same command.

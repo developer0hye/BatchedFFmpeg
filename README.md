@@ -21,6 +21,46 @@ pip install batchedffmpeg
 batchedffmpeg [options] [[infile options] -i infile]… {[outfile options] outfile}…
 ```
 
-Usage is the same with original ffmpeg besides `infile`. 
+Usage for command is the same with original ffmpeg besides `infile`. 
 
 `infile` can be a video file or **folder(=directory) where the video files are saved**. If `infile` is a folder, program will search all video files in a folder including subfolders and then those files will be processed under the same command.
+
+The output file is saved differently depending on the extension of `outfile`.
+
+### if `outfile` == video:
+
+```
+  input/
+    hi.mp4
+    bye.mp4
+```
+
+After running command(outfile=./output/out.avi)...
+
+```
+  output/
+    hi_out.avi
+    bye_out.avi
+```
+
+### elif `outfile` == img:
+
+```
+  input/
+    hi.mp4
+    bye.mp4
+```
+
+After running command(outfile=./output/out%4d.jpg)...
+
+```
+  output/
+    hi/
+      hi_out0001.jpg
+      hi_out0002.jpg
+      ...
+    bye/
+      bye_out0001.jpg
+      bye_out0002.jpg
+      ...
+```

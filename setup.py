@@ -23,7 +23,6 @@ project_requirements = get_requires("./requirements.txt")
 setuptools.setup(
     name="batchedffmpeg",
     version=version,
-    license='Apache',
     python_requires=">=3.6",
     author="Yonghye Kwon",
     author_email="developer.0hye@gmail.com",

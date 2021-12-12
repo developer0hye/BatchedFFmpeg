@@ -27,7 +27,7 @@ setuptools.setup(
     python_requires=">=3.6",
     author="Yonghye Kwon",
     author_email="developer.0hye@gmail.com",
-    description="",
+    description="Process multiple videos with one line of ffmpeg command.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/developer0hye/BatchedFFmpeg",
